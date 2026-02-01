@@ -7,7 +7,7 @@ public final class Exercise {
         // Create an array of type String and size 3
         String[] names = ArraysEx.newArray(String.class, 3);
         names[0] = "First value";
-        System.out.println("First element in STring array is : " + names[0]);
+        System.out.println("First element in String array is : " + names[0]);
         System.out.println(names.length); // 3
 
         // Create an array of Integer elements
