@@ -12,13 +12,13 @@ final class UndoStack<T> {
     public T pop() {
         if (_items.isEmpty())
             return null;
-        return _items.remove(_items.size() - 1);
+        return _items.removeLast();
     }
 
     public T peek() {
         if (_items.isEmpty())
             return null;
-        return _items.get(_items.size() - 1);
+        return _items.getLast();
     }
 
     public int size() {
