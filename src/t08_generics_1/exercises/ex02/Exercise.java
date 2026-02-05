@@ -1,6 +1,8 @@
 package t08_generics_1.exercises.ex02;
 
-// GENERIC CLASS
+// Generic Type
+
+// Implements a Generic Stack
 final class UndoStack<T> {
     private final java.util.ArrayList<T> _items = new java.util.ArrayList<>();
 
@@ -39,5 +41,15 @@ public final class Exercise {
         System.out.println(s.pop());  // UsePotion
         System.out.println(s.peek()); // Jump
         System.out.println(s.size()); // 2
+
+        UndoStack<Integer> integerUndoStackStack = new UndoStack<>();
+        integerUndoStackStack.push(1);
+        integerUndoStackStack.push(2);
+
+
+        int x = integerUndoStackStack.pop();
+
+        System.out.println("x= " +x);
+
     }
 }
