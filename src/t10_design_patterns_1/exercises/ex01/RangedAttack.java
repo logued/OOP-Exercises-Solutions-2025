@@ -7,9 +7,9 @@ class RangedAttack implements AttackStrategy
     @Override
     public int computeDamage(int baseDamage, int distanceMeters)
     {
-        if (distanceMeters > 10)
+        if (distanceMeters > 10) // beyond 10 m causes no damage
             return 0;
 
-        return baseDamage;
+        return baseDamage;  // within 10 m causes 'base' damage
     }
 }
