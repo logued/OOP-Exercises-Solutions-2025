@@ -4,6 +4,8 @@ public final class Exercise
 {
     public static void run()
     {
+        // create Enemy objects and set their attach strategy
+        //
         Enemy skeleton = new Enemy("Skeleton", 10, new MeleeAttack());
         Enemy archer = new Enemy("Archer", 10, new RangedAttack());
 

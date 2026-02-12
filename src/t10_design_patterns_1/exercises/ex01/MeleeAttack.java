@@ -7,12 +7,12 @@ class MeleeAttack implements AttackStrategy
     @Override
     public int computeDamage(int baseDamage, int distanceMeters)
     {
-        if (distanceMeters > 2)
+        if (distanceMeters > 2)  // a melee (hand-to-hand combat) must be close up to have any effect
             return 0;
 
         return baseDamage + 5;
     }
 
-    // a melee attach at further than 2 meters causes no damage
-    // a melee attach from 2 meters or less inflicts a damage of base + 5 units
+    // a melee attack at further than 2 meters causes no damage
+    // a melee attack from 2 meters or less inflicts a damage of base + 5 units
 }

@@ -2,7 +2,8 @@ package t10_design_patterns_1.exercises.ex01;
 
 // Enemy is the so-called "context" w.r.t. the Strategy Pattern.
 // It is the class that executes the attack but by using the
-// (dependency injected) set specific 'concrete' attack mechanism.
+// (dependency injected) specific 'concrete' attack mechanism,
+// to calculate damage.
 
 class Enemy
 {
