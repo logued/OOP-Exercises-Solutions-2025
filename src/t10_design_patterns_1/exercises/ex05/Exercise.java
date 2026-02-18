@@ -25,7 +25,8 @@ public class Exercise
         System.out.println("After undo: " + counter.getValue());
     }
 
-    private static void executeAndRecord(ArrayDeque<UndoableCommand> history, UndoableCommand command)
+    private static void executeAndRecord(ArrayDeque<UndoableCommand> history,
+                                         UndoableCommand command)
     {
         command.execute();
         history.push(command);
