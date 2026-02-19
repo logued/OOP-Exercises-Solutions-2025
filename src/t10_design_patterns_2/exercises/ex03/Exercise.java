@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 // Observer Pattern
-// Where objects can "observe" other "observable" objects
+// Where objects can "observe" other "observable" objects.
+// Observers are registered with the object being observed.
 //
 public class Exercise {
     public static void run() {
@@ -16,13 +17,13 @@ public class Exercise {
         ClickListener sfx = new SoundListener();
         ClickListener analytics = new AnalyticsListener();
 
-        button.addListener(sfx);  // sfx set to observe the button
+        button.addListener(sfx);  // sfx is set to observe the button
         button.addListener(analytics);  //
 
         button.click();
         button.click();
 
-        button.removeListener(sfx);
+        button.removeListener(sfx);  // remove a specific listener
 
         button.click();
     }
@@ -54,7 +55,7 @@ class AnalyticsListener implements ClickListener {
 // When a button is clicked, it iterates over the "observers" and calls the
 // onClick() method of each observer.
 // The Button doesn't know what concrete type objects are listening - it
-// only knows that they exist and it can notify them when the Button is clicked.
+// only knows that they exist, and it can notify them when the Button is clicked.
 class Button {
     private List<ClickListener> _listeners = new ArrayList<>();
 
