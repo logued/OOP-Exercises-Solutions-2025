@@ -12,24 +12,25 @@ public class Exercise {
         Button button = new Button();
 
         // ClickListener is the type for an observer
-        // ALl observers must implement the Click Listener interface
+        // ALl observers/listeners must implement the ClickListener interface
         // and hence implement the onClick() method
-        ClickListener sfx = new SoundListener();
-        ClickListener analytics = new AnalyticsListener();
+        ClickListener sfxListener = new SoundListener();  // sound effects listener
+        ClickListener analyticsListener = new AnalyticsListener();
 
-        button.addListener(sfx);  // sfx is set to observe the button
-        button.addListener(analytics);  //
+        button.addListener(sfxListener);  // sfxListener is registered with the button as observer/listener
+        button.addListener(analyticsListener);  //
 
         button.click();
         button.click();
 
-        button.removeListener(sfx);  // remove a specific listener
+        button.removeListener(sfxListener);  // remove a specific listener
 
         button.click();
     }
 }
 
-// Abstract observer
+// Observer/Listener Interface
+// All observers must comply with this 'contract'
 interface ClickListener {
     void onClick();
 }
@@ -55,26 +56,29 @@ class AnalyticsListener implements ClickListener {
 // When a button is clicked, it iterates over the "observers" and calls the
 // onClick() method of each observer.
 // The Button doesn't know what concrete type objects are listening - it
-// only knows that they exist, and it can notify them when the Button is clicked.
+// only knows that they exist, and that they are CLickListener types.
+//
 class Button {
+
     private List<ClickListener> _listeners = new ArrayList<>();
 
-    public void addListener(ClickListener l) {
-        if (l == null)
+    public void addListener(ClickListener listener) {
+        if (listener == null)
             throw new IllegalArgumentException("listener is null.");
 
-        _listeners.add(l);
+        _listeners.add(listener);
     }
 
-    public boolean removeListener(ClickListener l) {
-        if (l == null)
+    public boolean removeListener(ClickListener listener) {
+        if (listener == null)
             throw new IllegalArgumentException("listener is null.");
 
-        return _listeners.remove(l);
+        return _listeners.remove(listener);
     }
 
+    // Notify all registered listeners
     public void click() {
-        for (ClickListener l : _listeners)
-            l.onClick();
+        for (ClickListener listener : _listeners)
+            listener.onClick();
     }
 }
