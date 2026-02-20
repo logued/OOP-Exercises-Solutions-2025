@@ -6,6 +6,7 @@ import java.util.List;
 // Observer Pattern
 // Where objects can "observe" other "observable" objects.
 // Observers are registered with the object being observed.
+// When some Event occurs, the observed object notifies all its observers.
 //
 public class Exercise {
     public static void run() {
