@@ -1,5 +1,9 @@
 package t16_binary_io.exercises.ex04;
 
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 // Full JdbcGameAssetDao available in Exercise 03 — add these two methods to it.
 class JdbcGameAssetDao {

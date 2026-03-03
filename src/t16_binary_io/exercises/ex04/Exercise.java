@@ -4,9 +4,9 @@ package t16_binary_io.exercises.ex04;
 public class Exercise {
 
     public static void run() throws Exception {
-        String url  = "jdbc:mysql://localhost:3306/car_rental?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
-        String user = "car_rental_user";
-        String pass = "your_password";
+        String url  = "jdbc:mysql://localhost:3306/binary_data?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+        String user = "root";
+        String pass = "";
 
         JdbcGameAssetDao dao = new JdbcGameAssetDao(url, user, pass);
 
