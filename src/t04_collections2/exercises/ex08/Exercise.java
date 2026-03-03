@@ -36,7 +36,7 @@ public final class Exercise {
 }
 
 //
-//Exercise 08 — Merge two sorted lists (Intermediate)
+//Exercise.java 08 — Merge two sorted lists (Intermediate)
 //What you’ll practice: In‑place ordered merge using two iterators.
 //Why this matters: Avoids extra lists and highlights iterator power.
 //

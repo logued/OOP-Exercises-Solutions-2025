@@ -35,7 +35,7 @@ public final class Exercise {
     }
 }
 
-//Exercise 05 — Undo & Redo (Software Dev)
+//Exercise.java 05 — Undo & Redo (Software Dev)
 //What you’ll practice: Two‑stack (two‑deque) undo/redo pattern.
 //Why this matters: Editors, level tools, and UIs use this exact approach.
 //

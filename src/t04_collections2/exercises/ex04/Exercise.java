@@ -56,7 +56,7 @@ public final class Exercise {
     }
 }
 
-//Exercise 04 — A small job queue (Software Dev)
+//Exercise.java 04 — A small job queue (Software Dev)
 //What you’ll practice: Using a Deque<String> as a FIFO queue.
 //        Why this matters: Queues appear everywhere (build pipelines, server tasks).
 //

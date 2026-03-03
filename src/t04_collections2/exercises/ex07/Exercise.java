@@ -10,7 +10,7 @@ public final class Exercise {
 
         LinkedList<Integer> list = new LinkedList<>(List.of(1, 2, 3, 4, 5, 6, 7));
 
-        var iter = list.iterator();
+        java.util.Iterator<Integer> iter = list.iterator();
         int count = 0;
 
         while (list.size() > 1) {  // keep going until only one element left
@@ -31,7 +31,7 @@ public final class Exercise {
 }
 
 //
-//Exercise 07 — The Josephus game (Intermediate)
+//Exercise.java 07 — The Josephus game (Intermediate)
 //What you’ll practice: Circular traversal and removal with a linked list.
 //Why this matters: It forces you to manage iterator position carefully.
 //

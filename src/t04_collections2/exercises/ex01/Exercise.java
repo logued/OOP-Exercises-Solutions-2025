@@ -23,7 +23,7 @@ public final class Exercise {
     }
 }
 
-//Exercise 01
+//Exercise.java 01
 // What you’ll practice: Using a ListIterator to safely remove items during a scan.
 // Why this matters: Index-based removal on a LinkedList is clumsy and easy to break; the iterator makes it simple and safe.
 //

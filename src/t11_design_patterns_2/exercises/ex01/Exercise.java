@@ -1,4 +1,4 @@
-package t10_design_patterns_2.exercises.ex01;
+package t11_design_patterns_2.exercises.ex01;
 
 public class Exercise {
     public static void run() {

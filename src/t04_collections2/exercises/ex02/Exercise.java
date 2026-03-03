@@ -7,12 +7,12 @@ public final class Exercise {
     public static void run() {
         System.out.println("ex02 started");
 
-        var letters = new LinkedList<Character>();
+        LinkedList<Character> letters = new LinkedList<Character>();
         for (char c : "aaabbcc".toCharArray()) {    // create array of characters
             letters.add(c);                         // add characters to linkedList
         }
 
-        var iter = letters.listIterator();        // type inference, it is of type ListIterator<Character>
+        java.util.ListIterator<Character> iter = letters.listIterator();        // type inference, it is of type ListIterator<Character>
 
         char previousCharacter = 0;             // a dummy character as there is no previous one yet
 
@@ -33,7 +33,7 @@ public final class Exercise {
 }
 
 
-//Exercise 02 — Put markers between groups (Foundations)
+//Exercise.java 02 — Put markers between groups (Foundations)
 //What you’ll practice: Inserting during iteration with it.add(...).
 //Why this matters: Linked lists are great when you want to change the structure as you traverse.
 //

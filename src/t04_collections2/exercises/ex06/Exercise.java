@@ -6,13 +6,13 @@ public final class Exercise {
     public static void run() {
         System.out.println("ex06 started");
 
-        var eventQueue = new LinkedList<InputEvent>();
+        LinkedList<InputEvent> eventQueue = new LinkedList<InputEvent>();
 
         eventQueue.add(new InputEvent("Move"));
         eventQueue.add(new InputEvent("Attack"));
         eventQueue.add(new InputEvent("Heal"));
 
-        var it = eventQueue.listIterator();
+        java.util.ListIterator<InputEvent> it = eventQueue.listIterator();
 
         while (it.hasNext()) {
             InputEvent event = it.next();
@@ -32,7 +32,7 @@ public final class Exercise {
 }
 
 //
-//Exercise 06 — Game events with on‑the‑fly inserts (Games)
+//Exercise.java 06 — Game events with on‑the‑fly inserts (Games)
 //What you’ll practice: Modifying a list as you process it.
 //        Why this matters: Real-time systems often inject or cancel actions during handling.
 //

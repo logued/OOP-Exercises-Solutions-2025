@@ -6,7 +6,7 @@ public final class Exercise {
 
     public static void run() {
         // Build your data, call your sorts, and print short results here
-        System.out.println("Exercise 2 calling");
+        System.out.println("Exercise.java 2 calling");
 
     }
 }

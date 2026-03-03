@@ -13,7 +13,7 @@ public final class Exercise {
         // OR, using type inference - "var"
         // var words = new LinkedList<>(List.of("Java","is","fun"));
 
-        var iter = words.listIterator();        // type inference, it is of type ListIterator<Character>
+        java.util.ListIterator<String> iter = words.listIterator();        // type inference, it is of type ListIterator<Character>
 
         System.out.print("Words in order: ");
         while (iter.hasNext()) {
@@ -34,7 +34,7 @@ public final class Exercise {
 }
 
 
-//Exercise 03 — Walk forward, then backward (Foundations)
+//Exercise.java 03 — Walk forward, then backward (Foundations)
 //What you’ll practice: Using hasPrevious()/previous() to move backwards.
 //Why this matters: ListIterator is bidirectional; this is a core linked-list skill.
 //

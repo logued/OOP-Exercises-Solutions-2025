@@ -1,4 +1,5 @@
-package t10_design_patterns_2.exercises.ex03;
+package t11_design_patterns_2.exercises.ex01;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -7,7 +8,8 @@ public class Main {
     }
 
     public void run() {
-        System.out.println("Running t10_design_patterns_2.exercises.ex03...");
+        System.out.println("Running t10_design_patterns_2.exercises.ex01...");
         Exercise.run();
+
     }
 }
