@@ -8,7 +8,7 @@ public class Main {
     }
 
     public void run() throws Exception {
-        System.out.println("Running  t16_json_notes [BINARY DATA] .exercises.ex03...");
+        System.out.println("Running  t16_json_notes [BINARY DATA] .exercises.ex04...");
         Exercise.run();
     }
 }

@@ -8,8 +8,10 @@ import java.util.Optional;
 // Full JdbcGameAssetDao available in Exercise 03 — add these two methods to it.
 class JdbcGameAssetDao {
     private String _url, _user, _pass;
+
     public JdbcGameAssetDao(String url, String user, String pass) { _url=url; _user=user; _pass=pass; }
     private Connection open() throws SQLException { return DriverManager.getConnection(_url,_user,_pass); }
+
     public int insert(GameAsset asset) throws Exception {
         String sql = "INSERT INTO game_assets (asset_name, asset_type, file_size, asset_data) VALUES (?, ?, ?, ?)";
         try (Connection c = open(); PreparedStatement ps = c.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
