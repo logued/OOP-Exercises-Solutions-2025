@@ -2,6 +2,7 @@ package t13_functional_interfaces.exercises.ex04;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class Exercise {
@@ -13,52 +14,35 @@ public class Exercise {
         eventsList.add(new PlayerEvent("player2", "DAMAGE", 20));
         eventsList.add(new PlayerEvent("player3", "KILL", 30));
 
-        // define a (mapping) function that maps a PlayerEvent object to a player Id (String)
-        Function<PlayerEvent, String> getPlayerIdFunction = playerEvent -> playerEvent.getPlayerId();
+        // define a Consumer function that prints a playerEvent
+        // (We use a Consumer as we need to simply consume a value and do something with it
+        // - but not change it, nor return anything)
 
-        List<String> resultList = mapTo(eventsList, getPlayerIdFunction);
-        System.out.println(resultList);
+        Consumer<PlayerEvent> printPlayerEventFunction = playerEvent -> System.out.println(playerEvent.toString());
+
+        forEach(eventsList, printPlayerEventFunction);
 
         //TODO
-        // Add code here to create a mapper function that
-        // will map a PlayerEvent to a player Value
-        // Call the mapTo() function to use this mapper function, and capture and display the
-        // returned list.
-
+        // Define a Consumer function that will print a list of only the Player IDs
+        // (use getPlayerID() )
+        // Call the forEach() method with this consumer and check the output.
     }
 
     /**
-     * @param list   - a list of items of some type T
-     * @param mapper - a function (functional interface) that maps a type T item to a type R item
-     *               (note that the function is one that take a type T item and produces a type R item)
+     * Our own implementation of te forEach method.
+     * This method is available with Collections API
+     *
+     * @param list
+     * @param action - the Consumer function that carries out an action
      * @param <T>
-     * @param <R>
-     * @return - a new list of items of type R (results)
      */
-    public static <T, R> List<R> mapTo(List<T> list, Function<T, R> mapper) {
-
-        List<R> resultsList = new ArrayList<>();    // create the results list
+    public static <T> void forEach(List<T> list, Consumer<T> action) {
 
         for (T item : list) {
-            // Apply the mapper function to each item in the list to get the resulting item.
-            // (maps a PlayerEvent to a Player ID (String)
+            // Apply the 'action' function to each item in the list to get the resulting item.
 
-            resultsList.add(mapper.apply(item));
+            action.accept(item);        // accept (consumes an item and does something with that item)
         }
 
-        return resultsList;
     }
 }
-
-//@Test
-//public void printCities() {
-//
-//    List<String> cities = new ArrayList<>();
-//    cities.add("Delhi");
-//    cities.add("Mumbai");
-//    cities.add("Goa");
-//    cities.add("Pune");
-//
-//    Consumer<String> printConsumer= city-> System.out.println(city);
-//    cities.forEach(printConsumer);
-//}
