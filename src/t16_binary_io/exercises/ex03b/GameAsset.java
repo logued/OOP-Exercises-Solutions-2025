@@ -1,6 +1,6 @@
-package t16_binary_io.exercises.ex04;
+package t16_binary_io.exercises.ex03b;
 
-public class GameAsset {
+class GameAsset {
     private int _assetId; private String _assetName, _assetType; private int _fileSize; private byte[] _assetData;
     public GameAsset(int id, String name, String type, int size, byte[] data) {
         _assetId=id; _assetName=name.trim(); _assetType=type.trim().toLowerCase(); _fileSize=size; _assetData=data;

@@ -1,6 +1,6 @@
-package t16_binary_io.exercises.ex04;
+package t16_binary_io.exercises.ex03b;
 
-public class AssetMetadata {
+class AssetMetadata {
 
     // === Fields ===
     private int    _assetId;

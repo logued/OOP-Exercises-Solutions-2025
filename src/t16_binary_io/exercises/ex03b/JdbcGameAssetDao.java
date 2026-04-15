@@ -1,7 +1,4 @@
-package t16_binary_io.exercises.ex04;
-
-import t16_binary_io.exercises.ex04.AssetMetadata;
-import t16_binary_io.exercises.ex04.GameAsset;
+package t16_binary_io.exercises.ex03b;
 
 import java.sql.*;
 import java.util.ArrayList;
