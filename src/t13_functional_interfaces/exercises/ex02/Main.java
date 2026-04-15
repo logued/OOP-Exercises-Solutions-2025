@@ -1,5 +1,4 @@
-package t12_db_connectivity_dao.exercises.ex03;
-
+package t13_functional_interfaces.exercises.ex02;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -8,7 +7,7 @@ public class Main {
     }
 
     public void run() throws Exception {
-        System.out.println("Running t13_functional_interfaces.exercises.ex01...");
+        System.out.println("Running t13_functional_interfaces.ex02...");
         Exercise.run();
     }
 }

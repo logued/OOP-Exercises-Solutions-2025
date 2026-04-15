@@ -1,8 +1,8 @@
-package t09_generics_2.exercises.ex01;
+package t13_functional_interfaces.exercises.ex01;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        t13_functional_interfaces.exercises.ex01.Main app = new t13_functional_interfaces.exercises.ex01.Main();
+        Main app = new Main();
         app.run();
     }
 
