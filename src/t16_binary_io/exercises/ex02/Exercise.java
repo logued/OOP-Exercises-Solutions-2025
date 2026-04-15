@@ -11,13 +11,14 @@ public class Exercise {
 
         try (Connection c = DriverManager.getConnection(url, user, pass)) {
 
-            // Metadata-only query — asset_data deliberately excluded
+            // Metadata-only query — the asset_data BLOB field is deliberately excluded
+            // as we can't display the data in a console (text output)
             String sql = "SELECT asset_id, asset_name, asset_type, file_size FROM game_assets ORDER BY asset_id";
 
             try (PreparedStatement ps = c.prepareStatement(sql);
                  ResultSet rs = ps.executeQuery()) {
 
-                while (rs.next()) {
+                while ( rs.next() ) {
                     int    id       = rs.getInt("asset_id");
                     String name     = rs.getString("asset_name");
                     String type     = rs.getString("asset_type");

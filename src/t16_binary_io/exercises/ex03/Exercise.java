@@ -10,8 +10,8 @@ public class Exercise {
         String pass = "";
 
         GameAssetDao dao = new JdbcGameAssetDao(url, user, pass);
-
         byte[] original = new byte[]{10, 20, 30, 40, 50};
+
         GameAsset asset = new GameAsset(0, "test_sprite.bin", "application/octet-stream", original.length, original);
 
         int id = dao.insert(asset);
@@ -20,6 +20,10 @@ public class Exercise {
         Optional<GameAsset> optionalGameAsset = dao.findById(id);
         if (optionalGameAsset.isPresent()) {
             GameAsset gameAsset = optionalGameAsset.get();  // extract the asset
+
+            // compare the original array of bytes to the array of bytes
+            // that were retrieved from the database BLOB field.
+            // They should be the same.
             if(Arrays.equals(original, gameAsset.getAssetData())) {
                 System.out.println("BLOB byte[] data retrieved successfully");
             }

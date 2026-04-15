@@ -35,7 +35,8 @@ class JdbcGameAssetDao implements GameAssetDao {
             ps.setString(1, asset.getAssetName());
             ps.setString(2, asset.getAssetType());
             ps.setInt(3, asset.getFileSize());
-            ps.setBytes(4, asset.getAssetData());   // <-- BLOB
+
+            ps.setBytes(4, asset.getAssetData());   // <-- BLOB field
 
             int rows = ps.executeUpdate();
             if (rows != 1)
