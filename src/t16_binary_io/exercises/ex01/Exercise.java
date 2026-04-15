@@ -8,12 +8,19 @@ public class Exercise {
 
     public static void run() throws Exception {
         // Create a synthetic test file
+        // i.e. generate a sequence of 256 bytes and treat it as binary content.
+        // (The actual contents don't mean anything for this demo)
         byte[] synthetic = new byte[256];
         for (int i = 0; i < synthetic.length; i++)
             synthetic[i] = (byte) i;
+
+        // Use our BinaryFileUtil class to write the binary data buffer
+        // to a file as binary format.
+        //
         BinaryFileUtil.writeFile("data/test_asset.bin", synthetic);
 
-        // Round-trip test
+        // Round-trip test - i.e. read the file back in
+        //
         byte[] original = BinaryFileUtil.readFile("data/test_asset.bin");
         BinaryFileUtil.writeFile("data/test_asset_copy.bin", original);
         byte[] copy = BinaryFileUtil.readFile("data/test_asset_copy.bin");
