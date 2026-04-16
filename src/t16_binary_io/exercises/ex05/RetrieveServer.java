@@ -63,11 +63,8 @@ public class RetrieveServer {
             if (line == null) return;
 
             Map<?,?> req     = MAPPER.readValue(line, Map.class);
-            Map<?,?> requestType = (Map<?,?>) req.get("type");
-            String reqType = (String) requestType.get("type");
-            System.out.println("Server received request of type : " + reqType);
-
             Map<?,?> payload = (Map<?,?>) req.get("payload");
+
             int      id      = ((Number) payload.get("id")).intValue();
             System.out.println("Server received request id : " + id);
 

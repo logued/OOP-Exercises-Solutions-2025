@@ -33,12 +33,12 @@ public class RetrieveClient {
             out.println(MAPPER.writeValueAsString(request));    // send request to server via socket
 
             String   responseJson = in.readLine();  // Wait for response from server, then process it
-
+            System.out.println("Response: (from server) " + responseJson);
            ///Map<?,?> response     = MAPPER.readValue(responseJson, Map.class);
            ///Map<?,?> data         = (Map<?,?>) response.get("data");
 
-            Map<String,Object> response     = MAPPER.readValue(responseJson, Map.class);
-            Map<String,Object> data         = (Map<String,Object>) response.get("data");
+            Map<?,?> response     = MAPPER.readValue(responseJson, Map.class);
+            Map<?,?> data         = (Map<?,?>) response.get("data");
 
             byte[] binaryData = Base64.getDecoder().decode((String) data.get("fileData"));
 
